@@ -9,7 +9,7 @@ import {Container,Navbar,Nav} from 'react-bootstrap'
 const Header = () => {
     return (
 <header>
-    <Navbar bg="light" expand="lg" collapseOnSelect>
+    <Navbar bg="light" variant="light" expand="lg"  collapseOnSelect >
        <Container>
         <Navbar.Brand href="/">
                 {/* <img 
@@ -23,8 +23,8 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
-                          <Nav.Link href="/cart">Keranjang</Nav.Link>
-                        <Nav.Link href="login">Masuk</Nav.Link>
+                          <Nav.Link href="/cart"><i class="fas fa-shopping-cart"></i>Keranjang</Nav.Link>
+                        <Nav.Link href="login"><i class="fas fa-user"></i>Masuk</Nav.Link>
      
                     </Nav>
     

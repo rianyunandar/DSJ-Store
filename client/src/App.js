@@ -9,7 +9,7 @@ const App=() =>{
     <Header/>
        <main>
          <Container>
-            <h1>Selamat datang Di Toko Datu Sinar Jaya</h1>
+            <h1>Selamat Datang Di Toko Datu Sinar Jaya</h1>
         </Container>
        </main>
     <Footer/>
