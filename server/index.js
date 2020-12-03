@@ -11,7 +11,7 @@ app.use(morgan("dev"));
 //Support FE
 app.use(cors());
 
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
@@ -19,11 +19,11 @@ app.use(function(req, res, next) {
 });
 
 //for render login page
-app.get('/', function(req, res) {
+app.get('/', function (req, res) {
     res.json({
-            message: 'Welcome to DSJ Store'
-        })
-        // res.render('pages/login');
+        message: 'Welcome to DSJ Store'
+    })
+    // res.render('pages/login');FF
 });
 
 
