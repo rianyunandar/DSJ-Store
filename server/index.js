@@ -1,7 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const cors = require("cors");
-
+const Products = require("./products");
 const app = express();
 //post setting
 const port = process.env.PORT || 3001;
@@ -25,6 +25,18 @@ app.get('/', function (req, res) {
     })
     // res.render('pages/login');FF
 });
+
+app.get('/api/products', function (req, res) {
+    res.json(Products)
+    // res.render('pages/login');FF
+});
+
+app.get('/api/products/:id', function (req, res) {
+   const product = Products.find ((p)=>p._id === req.params.id)
+    res.json(product)
+    // res.render('pages/login');FF
+});
+
 
 
 app.listen(port, () => {
