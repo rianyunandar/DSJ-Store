@@ -3,6 +3,9 @@ const morgan = require("morgan");
 const cors = require("cors");
 const Products = require("./products");
 const app = express();
+const dotenv = require("dotenv");
+
+dotenv.config();
 //post setting
 const port = process.env.PORT || 3001;
 
@@ -40,5 +43,5 @@ app.get('/api/products/:id', function (req, res) {
 
 
 app.listen(port, () => {
-    console.log("Server is up on port " + port);
+    console.log(`Server running in ${process.env.NODE_ENV} on port  + ${port}`);
 });
