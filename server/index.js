@@ -1,12 +1,23 @@
-const express = require("express");
-const morgan = require("morgan");
-const cors = require("cors");
-const Products = require("./products");
-const app = express();
-const dotenv = require("dotenv");
-
+import dotenv from 'dotenv';
 dotenv.config();
+
+import express from 'express';
+import morgan from 'morgan';
+import cors from 'cors';
+import Products from './products.js';
+import colors from 'colors'
+
+import ConnectDB from './Config/database.js';
+
+const app = express();
+
+
 //post setting
+
+ConnectDB();
+
+
+
 const port = process.env.PORT || 3001;
 
 //for debuggin wiht morgan
@@ -43,5 +54,5 @@ app.get('/api/products/:id', function (req, res) {
 
 
 app.listen(port, () => {
-    console.log(`Server running in ${process.env.NODE_ENV} on port  + ${port}`);
+    console.log(`Server running in ${process.env.NODE_ENV} on port  + ${port}`.yellow.bold);
 });
